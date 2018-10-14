@@ -117,8 +117,8 @@ Scenario 3: User and token matched
 Examples:
 	|    user   |          token           |
 	|    user1  | [token1, token2]         |
-    |    user2  | [token1]                 |
-    |    user3  | []                       |
+        |    user2  | [token1]                 |
+        |    user3  | []                       |
 	|    user4  | [token1, token2, token3] |
 
 Scenario 4: Subarray fields
@@ -141,8 +141,8 @@ Scenario 5: Chronological order
 
 Examples:
 	| 	date      | position |
-	| 03-01-2018  |  first   |  
-	| 02-01-2018  |	 second  |  
-	| 01-01-2018  |  third   |
+	|   03-01-2018    |  first   |  
+	|   02-01-2018    |  second  |  
+	|   01-01-2018    |  third   |
 	
 
