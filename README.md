@@ -30,3 +30,22 @@ npm test
 #### Finally you can see the report of tests in following path:
 
 `GIG-QA-TEST/reporter/GIG-test--htmlReport.html`
+
+
+Bug in signup form:
+-------------
+Sign Up tests are failing because Consent form is not visible
+
+**Steps**:
+
+1. Open https://qatest.staging.kaboo.com/en/signup
+2. Fill email field
+3. Fill username field
+4. Fill password field
+5. Fill repeat password field
+
+**Expected result:** Consents form should be visible to be able to accept terms and conditions
+**Result:** The form does not load after 10 seconds
+
+Results are in GIG-test--htmlReport.html file.
+
