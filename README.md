@@ -16,7 +16,7 @@ Automation test framework using protractor
 #### Installation
 ###### 1. Clone github repository
 ```bash
-git clone https://github.com/camiaguado/GIG-assessment.git
+git clone https://github.com/camiaguado/GIG-QA-TEST.git
 ```
 ##### 2. Download dependencies
 ```bash
