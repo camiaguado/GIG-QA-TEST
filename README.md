@@ -1,7 +1,7 @@
 # GIG - QA ASSESSMENT
 
 ## Exercise one:
-Find exercise number one on **GIG-assessment/BDD/features/** path. In this folder you will find two .features:
+Find exercise number one on **GIG-QA-test/BDD/features/** path. In this folder you will find two .features:
 1. backEnd.feature
 2. frontEnd.feature
 
@@ -29,4 +29,4 @@ npm test
 
 #### Finally you can see the report of tests in following path:
 
-`GIG-assessment/Automation/reporter/GIG-test--htmlReport.html`
+`GIG-QA-TEST/reporter/GIG-test--htmlReport.html`
