@@ -117,8 +117,8 @@ Scenario 3: User and token matched
 Examples:
 	|    user   |          token           |
 	|    user1  | [token1, token2]         |
-        |    user2  | [token1]                 |
-        |    user3  | []                       |
+	|    user2  | [token1]                 |
+	|    user3  | []                       |
 	|    user4  | [token1, token2, token3] |
 
 Scenario 4: Subarray fields
