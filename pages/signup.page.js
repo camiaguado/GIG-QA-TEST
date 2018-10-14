@@ -7,7 +7,7 @@ var signupPage = function () {
     var email = element(by.css('input[ko-validate="formSignup.email"]'));
     var username = element(by.css('input[ko-validate="formSignup.username"]'));
     var password = element(by.css('input[ko-validate="formSignup.password"]'));
-    var passwordRepeat = element(by.css('input[name="passwordRepeat"]'));
+    var passwordRepeat = element(by.css('input[ko-validate="formSignup.passwordRepeat"]'));
     var termsAndConditions = element(by.css('label[for="consent_6"]>svg'));
     var personalData = element(by.css('label[for="consent_12"]>svg'));
     var nextBtn = element(by.css('[ng-show="regStep === 1"]'));
@@ -51,19 +51,17 @@ var signupPage = function () {
         passwordRepeat.sendKeys(pass);
     };
     this.checkTandC = function(){
-        browser.wait(ec.visibilityOf(consentForm), 10000, 'Consent for has not been uploaded after 10 seconds.');
+        browser.executeScript('window.scrollTo(300,document.body.scrollHeight)').then(function(){ 
+        browser.wait(ec.visibilityOf(consentForm), 10000, 'Consent form has not been uploaded after 10 seconds.');
         consentForm.click();
         termsAndConditions.click();
+    });
     };
     this.checkPD = function(){
-        browser.executeScript('window.scrollTo(0,document.body.scrollHeight)').then(function(){ 
             personalData.click();
-        });
     };
-    this.nextStep = function(){
-        browser.executeScript('window.scrollTo(0,document.body.scrollHeight)').then(function(){ 
+    this.nextStep = function(){ 
             nextBtn.click();
-        });
     };
     this.setFirstName = function(name){
         firstname.sendKeys(name);

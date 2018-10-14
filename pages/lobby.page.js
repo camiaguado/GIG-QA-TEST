@@ -4,8 +4,8 @@ var ec = protractor.ExpectedConditions;
 var homePage = function () {
 
 
-    var username = element(by.css('[name="email"]'));
-    var password = element(by.css('[name="pwd"]'));
+    var username = element(by.css('[ko-validate="formLogin.email"]'));
+    var password = element(by.css('[ko-validate="formLogin.pwd"]'));
     var profileBar = element(by.css('a[ng-href="/en/profile"]'));
     var loginWidget = element(by.css('div[ng-if="showLoginWidget"]'));
     var loginHeaderBtn = element(by.css('fieldset.m-navigation-login__fields [type="submit"]'));
