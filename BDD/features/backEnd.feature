@@ -140,9 +140,9 @@ Scenario 5: Chronological order
 	Then subarray with <date> date should be <position>
 
 Examples:
-	| 	date      | position |
-	|   03-01-2018    |  first   |  
-	|   02-01-2018    |  second  |  
+	| 	date          | position |
+	|   03-01-2018    |  first   |
+	|   02-01-2018    |  second  |
 	|   01-01-2018    |  third   |
 	
 

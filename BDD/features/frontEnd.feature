@@ -32,5 +32,6 @@ Scenario 4: Last 8 rewards
 
 Scenario 5: Mouse hover
 	Given a user that has claimed rewards
-	When user hover the mouse over a reward
+	When user is in Febies Valut Section
+	And user hover the mouse over a reward
 	Then text with the name of specific reward should be displayed

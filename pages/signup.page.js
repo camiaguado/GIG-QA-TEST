@@ -30,7 +30,7 @@ var signupPage = function () {
     var phoneNumber = element(by.css('input[ko-validate="formSignup.phoneNumber"]'));
     var registrationBtn = element(by.css('span[ng-switch-when="true"]'));
     var detailsBtn = element(by.css('span[ng-switch-default="ng-switch-default"]'));
-    var consentForm = element(by.css('[ng-if="isSignup"]'));
+    var consentForm = element(by.css('[class="m-consents__accept"]'));
 
 
     this.waitForForm = function(){
@@ -54,14 +54,16 @@ var signupPage = function () {
         browser.executeScript('window.scrollTo(300,document.body.scrollHeight)').then(function(){ 
         browser.wait(ec.visibilityOf(consentForm), 10000, 'Consent form has not been uploaded after 10 seconds.');
         consentForm.click();
+        browser.wait(ec.visibilityOf(termsAndConditions), 10000, 'Term and conditions has not been uploaded after 10 seconds.');
         termsAndConditions.click();
     });
     };
     this.checkPD = function(){
-            personalData.click();
+        browser.wait(ec.visibilityOf(personalData), 10000, 'Check personal details form has not been uploaded after 10 seconds.');
+        personalData.click();
     };
     this.nextStep = function(){ 
-            nextBtn.click();
+        nextBtn.click();
     };
     this.setFirstName = function(name){
         firstname.sendKeys(name);
